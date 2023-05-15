@@ -10,7 +10,11 @@ switch -Regex ($updateCONF) {
     Remove-Item -Path "LiveStreamViewer.ps1"
     Invoke-WebRequest -Uri "https://raw.githubusercontent.com/CrazyKitty357/LiveStreamViewer/main/LiveStreamViewer.ps1" -OutFile "LiveStreamViewer.ps1" 
     Write-Host "The update was successful."
-    Write-Host "You can view the changelog by typing 'changelog' in LiveStreamViewer."
+    Write-Host "You can view the changelog by typing " -nonewline
+    Write-Host "[" -nonewline
+    Write-Host "changelog" -nonewline -f yellow
+    Write-Host "]" -NoNewLine
+    Write-Host " in LiveStreamViewer."
     Pause
     Write-Host "Restarting..."
     Start-Sleep -Milliseconds 3500
