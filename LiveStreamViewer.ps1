@@ -120,7 +120,7 @@ switch -regex ($platform) {
         exit
     }
 
-    'followlist|follows' {
+    'followlist|follows|follow' {
         Clear-Host
         Write-Host "Now viewing your Follow List"
         Write-Host "If you input a "-NoNewline
