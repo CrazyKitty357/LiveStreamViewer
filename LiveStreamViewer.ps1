@@ -46,7 +46,7 @@ if (Get-Item "YTtoken.txt" -ErrorAction SilentlyContinue) {
     Start-Sleep -Milliseconds 2000
     Clear-Host
 }
-Write-Host "Version Release 1.0 Type [" -NoNewline
+Write-Host "Version Release 1.0.0 Type [" -NoNewline
 Write-Host "changelog" -ForegroundColor Yellow -NoNewline
 Write-Host "/" -NoNewline
 Write-Host "log" -ForegroundColor Yellow -NoNewline
@@ -67,7 +67,9 @@ else {Write-Host "/" -NoNewline
 Write-Host "/" -NoNewLine
 Write-Host "HD" -NoNewLine -ForegroundColor Blue
 Write-Host "]"
-Write-Host "You can type [help] to view all commands"
+Write-Host "You can type ["-NoNewline
+Write-Host "help" -NoNewLine -ForegroundColor Yellow
+Write-Host "] to view all commands"
 
 $platform = Read-Host 
 switch -regex ($platform) {
@@ -1123,7 +1125,7 @@ exit
 }
 'changelog|log' {
     Clear-Host
-    Write-Host "Changes for Release 1.0"
+    Write-Host "Changes for Release 1.0.0"
     Write-Host ""
     Write-Host "Devloper's notes"
     Write-Host "After a long devlopment period of 5 months I am proud to release 1.0 of this application."
