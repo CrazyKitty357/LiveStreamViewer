@@ -332,7 +332,7 @@ if ($channels.Count -gt 0) {
                $response = Invoke-RestMethod $url
                $streams = $response.items
                Write-Host "Choose a live stream to watch:"
-               for ($i = 1; $i -lt $streams.Count; $i++) {
+               for ($i = 0; $i -lt $streams.Count; $i++) {
                    Write-Host "$i. $($streams[$i].snippet.title)"
                }
                $selection = Read-Host "Enter the number of the live stream you want to watch"
